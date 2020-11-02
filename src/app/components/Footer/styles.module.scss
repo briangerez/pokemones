@@ -1,0 +1,32 @@
+@import '../../../scss/colors.scss';
+
+.footer {
+  align-items: center;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  position: relative;
+  
+  &::after {
+    background: black;
+    content: '';
+    height: 100%;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 100vw;
+    z-index: -1;
+  }
+}
+
+.link {
+  align-items: center;
+  background: #7FFFD4;
+  border-radius: 20px;
+  color: black;
+  justify-content: center;
+  display: flex;
+  height: 30px;
+  width: 150px;
+}

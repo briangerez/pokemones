@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import usePokemons from '../../../hooks/usePokemons';
 import SearchBar from '../../components/SearchBar';
+import Footer from '../../components/Footer';
 
 import Placeholder from '../../../assets/placeholder-image.png';
 
@@ -14,7 +15,7 @@ function Home() {
 
   return (
     <div className={styles.container}>
-      <div>
+      <div className={styles.main}>
         <h1 className={styles.title}>Pokemon Finder</h1>
         <p className={styles.subtitle}>El que quiere Pokemons, que los busque</p>
         <SearchBar setSearchQuery={setName} />
@@ -27,14 +28,15 @@ function Home() {
           </div>
           )}
           {isError && (
-            <div className={styles.error}>
-              <span className={styles.errorIcon}>:(</span>
-              <p className={styles.errorMsg}>No pudimos encontrar tu pokemon</p>
-            </div>
+          <div className={styles.error}>
+            <span className={styles.errorIcon}>:(</span>
+            <p className={styles.errorMsg}>No pudimos encontrar tu pokemon</p>
+          </div>
           )}
           {isLoading && <div className={styles.spinner} />}
         </section>
       </div>
+      <Footer />
     </div>
   );
 }
