@@ -46,7 +46,11 @@
 
 .pokemonName {
   border: 1px solid black;
-  height: 200px;
-  object-fit: cover;
-  width: 200px;
+  color: black;
+  display: flex;
+  letter-spacing: 5px;
+  padding: 10px;
+  text-transform: uppercase;
+  justify-content: center;
+  width: 180px;
 }
