@@ -12,7 +12,6 @@ function Home() {
 
   const { data: pokemon, isError, isLoading } = usePokemons({ pokemonName });
   const pokemonImage = pokemon?.sprites?.other?.officialArtwork?.frontDefault || Placeholder;
-
   return (
     <div className={styles.container}>
       <div className={styles.main}>
@@ -29,7 +28,6 @@ function Home() {
           )}
           {isError && (
           <div className={styles.error}>
-            <span className={styles.errorIcon}>:(</span>
             <p className={styles.errorMsg}>No pudimos encontrar tu pokemon</p>
           </div>
           )}

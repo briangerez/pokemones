@@ -1,9 +1,9 @@
-import { create } from 'apisauce';
+import axios from 'axios';
 import { CamelcaseSerializer } from 'cerealizr';
 
 const camelSerializer = new CamelcaseSerializer();
 
-const api = create({
+const api = axios.create({
   baseURL: 'https://pokeapi.co/api/v2',
   transformResponse: [(data) => camelSerializer.serialize(JSON.parse(data))],
 });

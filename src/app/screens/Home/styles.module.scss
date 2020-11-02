@@ -43,6 +43,19 @@
   }
 }
 
+.error {
+  align-items: center;
+  display: flex;
+  color: red;
+  flex-direction: column;
+  justify-content: center;
+  height: 150px;
+}
+
+.errorMsg {
+  font-size: 20px;
+}
+
 .pokemonImage {
   border: 1px solid black;
   height: 200px;

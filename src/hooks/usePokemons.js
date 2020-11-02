@@ -8,6 +8,7 @@ function usePokemons({ pokemonName = '' }) {
     () => api.get(`/pokemon/${pokemonName}`).then((res) => res.data),
     {
       enabled: pokemonName,
+      retry: 3,
     },
   );
 }
