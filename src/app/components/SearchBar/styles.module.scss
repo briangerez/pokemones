@@ -1,0 +1,25 @@
+@import '../../../scss/colors.scss';
+
+.searchBar {
+  display: flex;
+  flex-direction: row;
+}
+
+.searchInput {
+  display: flex;
+  margin-right: 20px;
+  flex: 0.5;
+  margin-right: 10px;
+  padding: 0 10px;
+}
+
+.searchButton {
+  align-items: center;
+  background: $LIGHTSTEELBLUE;
+  color: white;
+  display: flex;
+  justify-content: center;
+  height: 35px;
+  width: 120px;
+  border: 0;
+}

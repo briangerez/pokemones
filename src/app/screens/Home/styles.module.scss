@@ -1,7 +1,52 @@
 .container {
-  height: 100vh;
-  //justify-content: center;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  padding: 50px 50px 0;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: 900;
+}
+
+.subtitle {
+  color: grey;
+}
+
+.spinner,
+.spinner::after {
+  border-radius: 50%;
+  height: 32px;
+  width: 32px;
+}
+
+.spinner {
+  animation: rotate 1.1s infinite linear;
+  border: 3px solid;
+  border-color: grey white grey white ;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.pokemonImage {
+  border: 1px solid black;
+  height: 200px;
+  object-fit: cover;
+  width: 200px;
+}
+
+.pokemonName {
+  border: 1px solid black;
+  height: 200px;
+  object-fit: cover;
+  width: 200px;
 }
