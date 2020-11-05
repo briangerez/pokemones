@@ -4,7 +4,7 @@ import { CamelcaseSerializer } from 'cerealizr';
 const camelSerializer = new CamelcaseSerializer();
 
 const api = axios.create({
-  baseURL: 'https://pokeapi.co/api/v2',
+  baseURL: process.env.REACT_APP_API_URL,
   transformResponse: [(data) => camelSerializer.serialize(JSON.parse(data))],
 });
 
